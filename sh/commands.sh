@@ -29,3 +29,14 @@ iptables -t nat -A OUTPUT -d [ipaddress1] -j DNAT --to-destination [ipaddress2]
 
 # Remove forwarding 
 iptables -t nat -D OUTPUT 1
+
+# Services 
+# service command - list running services
+service --status-all
+# To print the status of apache (httpd) service:
+service httpd status
+# List all known services (configured via SysV)
+chkconfig --list
+# List service and their open ports
+netstat -tulpn
+
