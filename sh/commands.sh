@@ -40,3 +40,5 @@ chkconfig --list
 # List service and their open ports
 netstat -tulpn
 
+#Search or find big files Linux (50MB) in current directory, enter:
+find . -type f -size +50000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
