@@ -60,3 +60,10 @@ scp ваш_логин@имя_хоста.ru:~/\{file1.txt,file2.txt\} .
 #Замечание о скорости копирования
 #По умолчанию scp использует при передаче данных алгоритм шифрования Triple-DES. Можно несколько увеличить скорость передачи, включив алгоритм Blowfish, для этого в командной строке следует добавить -c blowfish:
 scp -c blowfish некий_файл ваш_логин@имя_хоста.ru:~
+
+# dns server
+cat /etc/resolv.conf 
+
+# find package files
+yum list | grep <package_name>
+rpm -ql <package_name>
