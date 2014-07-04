@@ -46,6 +46,12 @@
 			<version>1.6.0.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-oracle</artifactId>
+			<version>1.0.0.RELEASE</version>
+		</dependency>
+
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -79,6 +85,13 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+
 
 		<!-- Test Artifacts -->
 		<dependency>

@@ -11,8 +11,18 @@ import javax.persistence.OneToMany;
 @Entity
 public class Employer extends NamedEntity {
 	
-    @OneToMany(mappedBy = "employer", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private String address;
+	
+	@OneToMany(mappedBy = "employer", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<Employee> staff = new ArrayList<>();
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
 	public List<Employee> getStaff() {
 		return staff;
@@ -32,6 +42,7 @@ public class Employer extends NamedEntity {
 	@Override
 	public String toString() {
 		return "Employer [" + super.toString() + 
+				", address=" + address +
 				", staff=" + staff +
 				"]";
 	}

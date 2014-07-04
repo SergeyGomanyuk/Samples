@@ -10,6 +10,7 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:orcl="http://www.springframework.org/schema/data/orcl"
        xsi:schemaLocation="
             http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
             http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
@@ -19,13 +20,20 @@
             http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
             http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
-            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+            http://www.springframework.org/schema/data/orcl
+       	    http://www.springframework.org/schema/data/orcl/spring-data-orcl-1.0.xsd">
 
     <context:annotation-config/>
 
     <tx:annotation-driven/>
 
     <jpa:repositories base-package="ru.sergg.samples.jpa" transaction-manager-ref="transactionManager"/>
+
+	<orcl:pooling-datasource id="dataSource"
+	  url="jdbc:oracle:thin:@albimsoss:1521:POC1" 
+	  username="sergeygo" 
+	  password="sergeygo"/>
 
 <!--
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="true">
@@ -37,7 +45,7 @@
            <util:constant static-field="java.sql.Connection.TRANSACTION_READ_COMMITTED"/>
         </property>
     </bean>
--->
+
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="true">
         <property name="driverClassName" value="org.sqlite.JDBC" />
         <property name="url" value="jdbc:sqlite:vnf.db" />
@@ -49,11 +57,14 @@
            <util:constant static-field="java.sql.Connection.TRANSACTION_SERIALIZABLE"/>
         </property>
     </bean>
-    
+-->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="loadTimeWeaver">
             <bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
+        </property>
+        <property name="jpaVendorAdapter">
+	        <bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"/>
         </property>
         <property name="persistenceUnitName" value="jpa-testing"/>
     </bean>
