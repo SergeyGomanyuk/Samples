@@ -6,12 +6,34 @@ vim /etc/ssh/sshd_config
 # enable EPEL repository using following command
 rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
-# install ntfs support
-yum -y install ntfs-3g
+# enable elrepo repository using following command
+rpm --import http://elrepo.org/RPM-GPG-KEY-elrepo.org
+rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 
-# mount/unmount 
+# install ntfs hfsplus support
+yum -y install ntfs-3g
+yum -y install kmod-hfsplus
+
+# mount/unmount usb
 umount /mnt/USB
 mount /dev/sdb2 /mnt/USB
+
+# mount and format new disk
+ls /dev/sd*
+#/dev/sda /dev/sda1 /dev/sda2 /dev/sdb
+#/dev/sdb - new disk
+
+# format new disk use m for menu
+#fdisk has partition limit size
+yum install gdisk
+gdisk /dev/sdb
+# format
+/sbin/mkfs.ext4 -L /timemachine /dev/sdb1
+/sbin/mkfs.ext4 -L /data /dev/sdb2
+# add automount entries to /etc/fstab
+#LABEL=/timemachine /timemachine ext4 defaults 1 2
+#LABEL=/data /data ext4 defaults 1 2
+vim /etc/fstab
 
 # disable selinux
 # SELINUX=disabled
@@ -106,3 +128,43 @@ ln -s /usr/local/lib/PlexConnect/PlexConnect_daemon.bash  /etc/init.d/plexconnec
 chkconfig plexconnect on
 service plexconnect start
 
+# configure timemachine 
+yum -y install netatalk avahi
+useradd timemachine -M
+passwd timemachine
+chown -R timemachine:timemachine /timemachine/
+#You need to add the following line to the bottom of the file afpd.conf:-
+#- -tcp -noddp -uamlist uams_randnum.so,uams_dhx.so,uams_dhx2.so -nosavepassword
+nano /etc/netatalk/afpd.conf
+#Add to bottom of AppleVolumes.default
+#/timemachine TimeMachine allow:<username> cnidscheme:dbd options:usedots,upriv,tm
+nano /etc/netatalk/AppleVolumes.default
+# create/etc/avahi/services/afpd.service
+# <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+# <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+# <service-group>
+#    <name replace-wildcards="yes">%h</name>
+#    <service>
+#        <type>_afpovertcp._tcp</type>
+#        <port>548</port>
+#    </service>
+#    <service>
+#        <type>_device-info._tcp</type>
+#        <port>0</port>
+#        <txt-record>model=MacPro</txt-record>
+#    </service>
+#</service-group>
+nano /etc/avahi/services/afpd.service
+chkconfig netatalk on
+chkconfig avahi-daemon on
+service netatalk start
+service  avahi-daemon start
+# add to iptables and resart service
+#-A INPUT -p tcp -m state --state NEW -m tcp --dport 548 -j ACCEPT
+#-A INPUT -p tcp -m state --state NEW -m tcp --dport 5353 -j ACCEPT
+#-A INPUT -p tcp -m state --state NEW -m tcp --dport 5354 -j ACCEPT
+#-A INPUT -p udp -m udp --dport 548 -j ACCEPT
+#-A INPUT -p udp -m udp --dport 5353 -j ACCEPT
+#-A INPUT -p udp -m udp --dport 5354 -j ACCEPT
+vim /etc/sysconfig/iptables 
+service iptables restart
