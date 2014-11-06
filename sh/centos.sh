@@ -47,6 +47,8 @@ chmod u+w /etc/sudoers
 vim /etc/sudoers # %sudoers        ALL=(ALL)       NOPASSWD: ALL
 chmod u-w /etc/sudoers
 
+# install dropbox (https://gist.github.com/briangonzalez/6903025)
+
 # install trasmission
 cd /etc/yum.repos.d/
 wget http://geekery.altervista.org/geekery-el6-x86_64.repo
@@ -55,11 +57,19 @@ yum install trasmission transmission-daemon
 mkdir /home/transmission
 chown transmission:transmission transmission
 # set download dir
-# "download-dir": "/home/transmission",
+# "download-dir": "/home/transmission/Downloads",
+# "download-queue-enabled": true,
+# "download-queue-size": 1,
 # set whitelist
 # "rpc-whitelist": "127.0.0.1,192.168.1.104,192.168.1.107",
 # or
 # "rpc-whitelist-enabled": false
+# "start-added-torrents": true,
+# "trash-original-torrent-files": true,
+# "umask": 2,
+# "watch-dir": "/home/transmission/Dropbox/Torrents",
+# "watch-dir-enabled": true
+
 vim /var/lib/transmission/settings.json
 chkconfig transmission-daemon on  
 service transmission-daemon start
@@ -168,3 +178,5 @@ service  avahi-daemon start
 #-A INPUT -p udp -m udp --dport 5354 -j ACCEPT
 vim /etc/sysconfig/iptables 
 service iptables restart
+
+# install samba (http://lintut.com/easy-samba-server-installation-on-centos-6-5/) and setup share (see http://www.ubuntugeek.com/howto-setup-samba-server-with-tdbsam-backend.html)
