@@ -2,6 +2,17 @@
 lsb_release -a
 cat /etc/*-release
 
+# redirect output to files
+foo > stdout.txt 2> stderr.txt
+#or if you want in same file:
+foo > allout.txt 2>&1
+
+# show 10 biggest files & dirs
+du -a /var | sort -n -r | head -n 10
+
+# utilizes one CPU core with 100% load
+cat /dev/zero > /dev/null
+
 # Get disk space allocation 
 df -h
 
