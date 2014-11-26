@@ -1,0 +1,252 @@
+<!--
+  ~ Copyright (c) 1996 to 2014 Amdocs Software Systems Limited.
+  ~ All rights reserved.
+  ~
+  ~ These coded instructions, statements, and computer programs contain
+  ~ unpublished trade secrets and proprietary information of Amdocs
+  ~ Software Systems Limited and are protected by Federal copyright law
+  ~ and trade secret law.  They may not be disclosed to third parties or
+  ~ used or copied or duplicated in any form, in whole or in part, without
+  ~ the prior written consent of Amdocs Software Systems Limited.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.amdocs.nfv</groupId>
+    <artifactId>deployment</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>deployment</name>
+    <properties>
+        <package.name>${project.artifactId}</package.name>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>LATEST</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>LATEST</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>LATEST</version>
+        </dependency>
+<!--
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.0-m11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-xc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amdocs.nfv.backend</groupId>
+            <artifactId>nfvo-datatypes-lib</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amdocs.nfv</groupId>
+            <artifactId>nfv-rest</artifactId>
+            <version>${project.parent.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-frontend-simple</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-transports-http</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-ws-addr</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.xml.bind</groupId>
+                    <artifactId>jaxb-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-asm</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-api</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-ws-security</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.1</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.1.8</version>
+        </dependency>
+-->
+    </dependencies>
+    <build>
+	<finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${basedir}/../../package/${package.name}</directory>
+                        </fileset>
+                        <fileset>
+                            <directory>${basedir}/../../package</directory>
+                            <includes>
+                                <include>${package.name}.zip</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <includes>
+                        <include>**/Test*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!-- Workaround for Maven bug #MJAR-156 (https://jira.codehaus.org/browse/MJAR-156) -->
+                            <useUniqueVersions>false</useUniqueVersions>
+                            <mainClass>com.amdocs.nfvo.omsadapter.StartUp</mainClass>
+                        </manifest>
+						<manifestEntries>
+							<!--  temporary workaround for system scope libraries--> 
+	  						<Class-Path>${conf.dir}/</Class-Path>
+  						</manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/lib</outputDirectory>
+							<excludeArtifactIds>nfvo-metadata</excludeArtifactIds>
+						</configuration>
+					</execution>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/${conf.dir}</outputDirectory>
+                            <includeArtifactIds>nfvo-metadata</includeArtifactIds>
+							<includes>**/*.conf</includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.goldin</groupId>
+                <artifactId>copy-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-archive</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <useTrueZipForPack>false</useTrueZipForPack>
+                            <!-- use Ant libraries for better performance -->
+                            <resources>
+                                <!-- ~~~~~~~~~~~~~~ -->
+                                <!-- Copy resources -->
+                                <!-- ~~~~~~~~~~~~~~ -->
+                                <resource>
+                                    <targetPath>${basedir}/../../package/${package.name}/${conf.dir}</targetPath>
+                                    <directory>${basedir}/target/${conf.dir}</directory>
+									<preservePath>true</preservePath>
+                                </resource>
+                                <resource>
+                                    <targetPath>${basedir}/../../package/${package.name}/lib</targetPath>
+                                    <directory>${basedir}/target/lib</directory>
+                                </resource>
+                                <resource>
+                                    <targetPath>${basedir}/../../package/${package.name}</targetPath>
+                                    <directory>${basedir}/target</directory>
+                                    <includes>
+                                        <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                                <!-- ~~~~~~~~~~~~~~~~~~~~ -->
+                                <!-- Create final archive -->
+                                <!-- ~~~~~~~~~~~~~~~~~~~~ -->
+                                <resource>
+                                    <targetPath>${basedir}/../../package/${package.name}.zip</targetPath>
+                                    <directory>${basedir}/../../package/${package.name}</directory>
+                                    <artifact>true</artifact>
+                                    <attachArtifact>true</attachArtifact>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
