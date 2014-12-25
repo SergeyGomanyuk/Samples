@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7146DEBC-7104-434B-A9DE-A6B9D3488701</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LanguageLearning</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6B87D3A4A30EFEC9586899C32C68E397A4B6D78F</key>
+		<string>https://github.com/SergeyGomanyuk/Samples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>objective-c/LanguageLearning/LanguageLearning.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6B87D3A4A30EFEC9586899C32C68E397A4B6D78F</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SergeyGomanyuk/Samples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6B87D3A4A30EFEC9586899C32C68E397A4B6D78F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6B87D3A4A30EFEC9586899C32C68E397A4B6D78F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Samples</string>
+		</dict>
+	</array>
+</dict>
+</plist>
