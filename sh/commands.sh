@@ -25,6 +25,12 @@ tail -f slee/log/system.log | grep SomBridge
 # search in archives
 zgrep "nfvo-backend.NFVOperationsImpl" *
 
+# find all files with given text
+grep --include=\*.{xml,properties} -rnw ./Host001/ -e "192.168.77.86"
+
+# replace all substrings
+grep --include=\*.{xml,properties} -rnl './Host001' -e "192.168.77.86" | xargs -i@ sed -i 's/192.168.77.86/10.247.137.45/g' @
+
 # ssh example with key and without StrictHostKeyChecking
 ssh -o "StrictHostKeyChecking no" -i ~/jnetx.pem 10.10.11.110
 
