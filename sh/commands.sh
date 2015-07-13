@@ -33,6 +33,7 @@ grep --include=\*.{xml,properties} -rnl './Host001' -e "192.168.77.86" | xargs -
 
 # ssh example with key and without StrictHostKeyChecking
 ssh -o "StrictHostKeyChecking no" -i ~/jnetx.pem 10.10.11.110
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no peter@192.168.0.100
 
 # Forwarding one IP to another
 # http://superuser.com/questions/681705/using-iptables-to-redirect-ip-address
@@ -84,3 +85,8 @@ cat /etc/resolv.conf
 # find package files
 yum list | grep <package_name>
 rpm -ql <package_name>
+
+# find mac address of default gateway
+ifconfig
+ping
+arp -a
