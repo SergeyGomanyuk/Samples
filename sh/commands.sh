@@ -95,3 +95,12 @@ arp -a
 dd if=/dev/zero of=output.dat  bs=1024  count=10240
 dd if=/dev/zero of=output.dat  bs=1M  count=10
 
+# Test TCP & UDP connection using netcut (https://www.digitalocean.com/community/tutorials/how-to-use-netcat-to-establish-and-test-tcp-and-udp-connections-on-a-vps)
+netcat -v -l 4444
+netcat -v domain.com 4444
+
+netcat -v -l 4444 > received_file
+netcat -v domain.com 4444 < original_file
+
+
+
