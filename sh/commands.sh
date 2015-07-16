@@ -90,3 +90,8 @@ rpm -ql <package_name>
 ifconfig
 ping
 arp -a
+
+# Create File of a Given Size (http://linuxcommando.blogspot.ru/2008/02/create-file-of-given-size.html)
+dd if=/dev/zero of=output.dat  bs=1024  count=10240
+dd if=/dev/zero of=output.dat  bs=1M  count=10
+
