@@ -102,5 +102,9 @@ netcat -v domain.com 4444
 netcat -v -l 4444 > received_file
 netcat -v domain.com 4444 < original_file
 
+# descrypt and store DVD (http://forum.doom9.org/showthread.php?t=149529)
+filestat /dev/dvdrom
+dd if=/dev/dvdrom of=dvd.iso bs=2048 conv=noerror,sync
+
 
 
