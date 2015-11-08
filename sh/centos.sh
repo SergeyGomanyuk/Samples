@@ -35,9 +35,6 @@ gdisk /dev/sdb
 #LABEL=/data /data ext4 defaults 1 2
 vim /etc/fstab
 
-# rip dvd to iso
-dd if=/dev/scd0 of=image_name.iso
-
 # disable selinux
 # SELINUX=disabled
 vim /etc/selinux/config
