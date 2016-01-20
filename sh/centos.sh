@@ -72,6 +72,9 @@ chown transmission:transmission transmission
 
 vim /var/lib/transmission/settings.json
 chkconfig transmission-daemon on  
+
+# enhance transmission web-gui https://github.com/ronggang/transmission-web-control#introduction
+
 service transmission-daemon start
 
 # open ports 
