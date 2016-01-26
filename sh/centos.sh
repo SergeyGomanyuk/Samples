@@ -77,6 +77,9 @@ chkconfig transmission-daemon on
 
 service transmission-daemon start
 
+# enable transmission secure UI https://blog.flo.cx/2014/03/adding-ssl-to-transmissions-web-interface/
+# open ports in ip tables
+
 # open ports 
 # http://www.binarytides.com/open-http-port-iptables-centos/
 # edit iptables: open 9091 - transmisssion web 51413 - torrent
