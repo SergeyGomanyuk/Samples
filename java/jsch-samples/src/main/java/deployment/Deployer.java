@@ -1,4 +1,4 @@
-package com.amdocs.nfvo.deployment;
+package deployment;
 
 import com.google.gson.Gson;
 

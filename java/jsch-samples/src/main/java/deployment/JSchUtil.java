@@ -1,7 +1,6 @@
-package com.amdocs.nfvo.deployment;
+package deployment;
 
 import com.jcraft.jsch.*;
-import org.apache.log4j.*;
 
 import java.io.IOException;
 import java.io.InputStream;

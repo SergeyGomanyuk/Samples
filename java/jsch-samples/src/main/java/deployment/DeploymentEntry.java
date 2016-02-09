@@ -1,4 +1,4 @@
-package com.amdocs.nfvo.deployment;
+package deployment;
 
 /**
  * Created by SERGEYGO on 21.11.2014.
