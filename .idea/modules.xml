@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/jsch-samples/java-jsch.iml" filepath="$PROJECT_DIR$/java/jsch-samples/java-jsch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/jsch-samples/jsch-samples.iml" filepath="$PROJECT_DIR$/java/jsch-samples/jsch-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/se-samples/se-samples.iml" filepath="$PROJECT_DIR$/java/se-samples/se-samples.iml" />
     </modules>
   </component>
