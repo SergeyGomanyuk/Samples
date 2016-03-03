@@ -11,6 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
+ * http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk
+ *
  * Created by sergeygomanyuk on 09.02.16.
  */
 public class FileUtil {
