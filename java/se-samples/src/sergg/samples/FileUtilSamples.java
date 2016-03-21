@@ -1,21 +1,17 @@
-package sergg.samples.nio;
+package sergg.samples;
 
-import org.junit.Test;
+import sergg.util.FileUtil;
 
+import java.io.IOException;
 import java.nio.file.Paths;
 
 /**
  * Created by sergeygomanyuk on 09.02.16.
  */
-public class FileUtilTest {
+public class FileUtilSamples {
 
-    @Test
-    public void testGetDirectories() throws Exception {
+    public static void main(String[] args) throws IOException {
         System.out.println(FileUtil.getDirectories(Paths.get(".")));
-    }
-
-    @Test
-    public void testGetEntries() throws Exception {
         System.out.println(FileUtil.getEntries(Paths.get(".")));
     }
 }
