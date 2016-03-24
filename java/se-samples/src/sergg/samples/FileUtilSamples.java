@@ -11,7 +11,12 @@ import java.nio.file.Paths;
 public class FileUtilSamples {
 
     public static void main(String[] args) throws IOException {
+        // todo redisign as visitors for common tasks: get dirs, get files, get entries with filtering, etc..
         System.out.println(FileUtil.getDirectories(Paths.get(".")));
         System.out.println(FileUtil.getEntries(Paths.get(".")));
+
+        // todo copy files samples
+        // todo delete files/directories samples
+        // todo manage file attrs samples
     }
 }
