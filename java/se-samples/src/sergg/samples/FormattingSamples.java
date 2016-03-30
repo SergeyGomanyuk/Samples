@@ -5,6 +5,6 @@ package sergg.samples;
  */
 public class FormattingSamples {
     public static void main(String[] args) {
-        // todo implement
+
     }
 }
