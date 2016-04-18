@@ -11,7 +11,10 @@ import java.util.concurrent.*;
 public class ExecutorSamples {
 
     public static void main(String[] args) throws InterruptedException {
-        invokeAllWithTimeout1();
+        ExecutorService threadPool = new ThreadPoolExecutor(1, 1000, 100000, TimeUnit.MILLISECONDS, new SynchronousQueue<Runnable>(false));
+        Future monitorTask = threadPool.submit(new MonitorTask(3000));
+        Thread.sleep(10000);
+        threadPool.shutdownNow();
     }
 
 //    public static void invokeAllWithTimeout2() throws InterruptedException {
@@ -62,6 +65,29 @@ public class ExecutorSamples {
 
         executorService.shutdown();
     }
+
+    private static class MonitorTask implements Runnable {
+        private int msek;
+
+        public MonitorTask(int ms) {
+            this.msek = ms;
+        }
+
+        public void run() {
+            while (!Thread.interrupted()) {
+                try {
+                    Thread.sleep(msek);
+                    System.out.println("Monitor task run...");
+                } catch (InterruptedException e) {
+                    System.out.println("Monitor task sleep interrupted: " + e);
+                    Thread.currentThread().interrupt();
+                } catch (Throwable t) {
+                    System.out.println("Error has happened" + t);
+                }
+            }
+        }
+    }
+
 
     private static class InterruptibleTask implements Callable<Object> {
 
