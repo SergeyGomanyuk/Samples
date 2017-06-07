@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
-    <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
       <entry name="!?*.form" />
@@ -14,36 +12,29 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for java-jssh" enabled="true">
+      <profile name="Annotation profile for java-jssh" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="java-jssh" />
       </profile>
-      <profile default="false" name="Annotation profile for java-jsch" enabled="true">
+      <profile name="Annotation profile for java-jsch" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="java-jsch" />
       </profile>
-      <profile default="false" name="Annotation profile for jsch-samples" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jsch-samples" />
+        <module name="log4j" />
+        <module name="se-samples" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="deployment" target="1.5" />
-      <module name="java-jsch" target="1.8" />
-      <module name="java-jssh" target="1.8" />
-      <module name="jsch-samples" target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="log4j" target="1.5" />
+      <module name="se-samples" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

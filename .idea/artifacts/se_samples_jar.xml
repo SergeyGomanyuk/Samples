@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="se-samples:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/se_samples_jar</output-path>
+    <root id="archive" name="se-samples.jar">
+      <element id="module-output" name="se-samples" />
+    </root>
+  </artifact>
+</component>

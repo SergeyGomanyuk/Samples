@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/jdk8-samples/jdk8-samples.iml" filepath="$PROJECT_DIR$/java/jdk8-samples/jdk8-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/jsch-samples/jsch-samples.iml" filepath="$PROJECT_DIR$/java/jsch-samples/jsch-samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/junit-samples/junit-samples.iml" filepath="$PROJECT_DIR$/java/junit-samples/junit-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/log4j/log4j.iml" filepath="$PROJECT_DIR$/java/log4j/log4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/se-samples/se-samples.iml" filepath="$PROJECT_DIR$/java/se-samples/se-samples.iml" />
     </modules>
   </component>

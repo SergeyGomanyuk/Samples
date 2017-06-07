@@ -24,7 +24,7 @@
 # The Java classes used in these examples are contained in
 # the com.example Java package.
 #
-# * Main.java: gets the Platform MBean Server, and creates
+# * MainSeparateDebugAndInfoLogFiles.java: gets the Platform MBean Server, and creates
 #              and registers the Hello World MBean and the
 #              QueueSampler MXBean on it.
 #
@@ -111,14 +111,14 @@ $(JDK_HOME)/bin/jconsole
 #  multiple MBean Server instances on the same JVM.
 #
 
-# Start the Main application (the out-of-the-box management agent for
+# Start the MainSeparateDebugAndInfoLogFiles application (the out-of-the-box management agent for
 # local management will be enabled by JConsole using the Attach API).
 #
 
-$(JDK_HOME)/bin/java com.example.Main
+$(JDK_HOME)/bin/java com.example.MainSeparateDebugAndInfoLogFiles
 
 # Start jconsole on a different shell window on the same host and select the
-# Main application from the list of local processes, then click on Connect.
+# MainSeparateDebugAndInfoLogFiles application from the list of local processes, then click on Connect.
 # Navigate through the different tabs to browse the monitoring and management
 # information exposed by the out-of-the-box management agent.
 #
@@ -140,7 +140,7 @@ $(JDK_HOME)/bin/jconsole
 #  the RMI connector server using a programmatic JMX client.
 #
 
-# Start the Main application with the out-of-the-box management agent for remote
+# Start the MainSeparateDebugAndInfoLogFiles application with the out-of-the-box management agent for remote
 # management enabled (authentication and encryption have been disabled to
 # simplify the example but this is discouraged in production environments)
 #
@@ -148,7 +148,7 @@ $(JDK_HOME)/bin/jconsole
 $(JDK_HOME)/bin/java -Dcom.sun.management.jmxremote.port=9999 \
                      -Dcom.sun.management.jmxremote.authenticate=false \
                      -Dcom.sun.management.jmxremote.ssl=false \
-                     com.example.Main
+                     com.example.MainSeparateDebugAndInfoLogFiles
 
 # Start the JMX client application on a different shell window on the same host
 #

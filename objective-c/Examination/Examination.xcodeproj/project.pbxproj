@@ -13,7 +13,7 @@
 		35B40D1D19C9BCBC00FE19EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35B40D1B19C9BCBC00FE19EC /* InfoPlist.strings */; };
 		35B40D1F19C9BCBC00FE19EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B40D1E19C9BCBC00FE19EC /* main.m */; };
 		35B40D2319C9BCBC00FE19EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B40D2219C9BCBC00FE19EC /* AppDelegate.m */; };
-		35B40D2619C9BCBC00FE19EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B40D2419C9BCBC00FE19EC /* Main.storyboard */; };
+		35B40D2619C9BCBC00FE19EC /* MainSeparateDebugAndInfoLogFiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B40D2419C9BCBC00FE19EC /* MainSeparateDebugAndInfoLogFiles.storyboard */; };
 		35B40D2919C9BCBC00FE19EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B40D2819C9BCBC00FE19EC /* ViewController.m */; };
 		35B40D2B19C9BCBC00FE19EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B40D2A19C9BCBC00FE19EC /* Images.xcassets */; };
 		35B40D3219C9BCBC00FE19EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B40D3119C9BCBC00FE19EC /* XCTest.framework */; };
@@ -45,7 +45,7 @@
 		35B40D2019C9BCBC00FE19EC /* Examination-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Examination-Prefix.pch"; sourceTree = "<group>"; };
 		35B40D2119C9BCBC00FE19EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35B40D2219C9BCBC00FE19EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35B40D2519C9BCBC00FE19EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35B40D2519C9BCBC00FE19EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainSeparateDebugAndInfoLogFiles.storyboard; sourceTree = "<group>"; };
 		35B40D2719C9BCBC00FE19EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		35B40D2819C9BCBC00FE19EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		35B40D2A19C9BCBC00FE19EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			children = (
 				35B40D2119C9BCBC00FE19EC /* AppDelegate.h */,
 				35B40D2219C9BCBC00FE19EC /* AppDelegate.m */,
-				35B40D2419C9BCBC00FE19EC /* Main.storyboard */,
+				35B40D2419C9BCBC00FE19EC /* MainSeparateDebugAndInfoLogFiles.storyboard */,
 				35B40D2719C9BCBC00FE19EC /* ViewController.h */,
 				35B40D2819C9BCBC00FE19EC /* ViewController.m */,
 				35B40D2A19C9BCBC00FE19EC /* Images.xcassets */,
@@ -235,7 +235,7 @@
 			files = (
 				35B40D2B19C9BCBC00FE19EC /* Images.xcassets in Resources */,
 				35B40D1D19C9BCBC00FE19EC /* InfoPlist.strings in Resources */,
-				35B40D2619C9BCBC00FE19EC /* Main.storyboard in Resources */,
+				35B40D2619C9BCBC00FE19EC /* MainSeparateDebugAndInfoLogFiles.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +288,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		35B40D2419C9BCBC00FE19EC /* Main.storyboard */ = {
+		35B40D2419C9BCBC00FE19EC /* MainSeparateDebugAndInfoLogFiles.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				35B40D2519C9BCBC00FE19EC /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainSeparateDebugAndInfoLogFiles.storyboard;
 			sourceTree = "<group>";
 		};
 		35B40D3A19C9BCBC00FE19EC /* InfoPlist.strings */ = {
