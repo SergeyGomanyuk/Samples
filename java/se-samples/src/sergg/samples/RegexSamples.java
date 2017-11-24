@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 /**
  * Created by sergeygo on 16.03.2016.
@@ -36,10 +36,10 @@ public class RegexSamples {
         System.out.format("isMatched: %s, input: %s, regex: %s%n", isMatched2, input2, regex);
 
         // java 8 pattern as predicate:
-        final Pattern pattern = Pattern.compile(regex);
-        final List<String> inputs = Arrays.asList(new String[] {input1, input2, input3});
-        final List<String> filteredInputs = inputs.stream().filter(pattern.asPredicate()).collect(Collectors.toList());
-        System.out.format("inputs: %s, filtered: %s%n", inputs, filteredInputs);
+//        final Pattern pattern = Pattern.compile(regex);
+//        final List<String> inputs = Arrays.asList(new String[] {input1, input2, input3});
+//        final List<String> filteredInputs = inputs.stream().filter(pattern.asPredicate()).collect(Collectors.toList());
+//        System.out.format("inputs: %s, filtered: %s%n", inputs, filteredInputs);
     }
 
     // also consider split(CharSequence input, int limit), splitAsStream(CharSequence input)

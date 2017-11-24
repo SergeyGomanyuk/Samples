@@ -12,9 +12,10 @@ public class MainZipLogFiles {
         PropertyConfigurator.configure(MainZipLogFiles.class.getResource("./log4j.zip.properties"));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         while(true) {
             logger.info(".............................................................................................");
+            Thread.sleep(1);
         }
     }
 }

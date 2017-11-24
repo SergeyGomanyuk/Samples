@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: log4j-1.2.17.jar commons-collections-3.2.1.jar commons-bea
+ nutils-1.7.0.jar commons-configuration-1.6.jar commons-lang-2.4.jar c
+ ommons-beanutils-core-1.8.0.jar commons-logging-1.1.1.jar mail-1.4.ja
+ r activation-1.1.jar commons-digester-1.8.jar
+Main-Class: 
+

@@ -6,9 +6,11 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.PosixFilePermission;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 /**
  * http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk
@@ -71,6 +73,12 @@ public class FileUtil {
 
     public static String[] fileListIo(String directory) {
         return new File(directory).list();
+    }
+
+    public static void setDefaultPosixPermissions(final Path file) throws IOException {
+        final File tempFile = File.createTempFile("temp", ".tmp");
+        final Set<PosixFilePermission> posixFilePermissions = Files.getPosixFilePermissions(tempFile.toPath());
+        Files.setPosixFilePermissions(file, posixFilePermissions);
     }
 
 }
