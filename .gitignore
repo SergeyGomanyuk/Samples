@@ -1,3 +1,7 @@
 .metadata
 RemoteSystemsTempFiles
 out
+java/se-samples/target
+java/se-samples/target
+java/log4j/target
+logs

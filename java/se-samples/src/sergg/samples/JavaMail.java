@@ -29,6 +29,9 @@ import java.util.Properties;
  */
 public class JavaMail {
 
+    private static final String REPORT_PATH = "3ir/runtime/SMP_2/smp/tmp/archive";
+    private static final String AGGREGATED_REPORT_FILE_NAME_PATTERN = "3ir-performance-report-{0}.csv";
+
     private String email;
     private String primarySmtpServer;
     private String secondarySmtpServer;
@@ -40,19 +43,19 @@ public class JavaMail {
                 "localhost",
                 "Text mail test",
                 "Mail without attachment!");
-        sendHtmlEmail(
-                "SergeyGomanyuk@yandex.ru",
-                "sergeygo@amdocs.com",
-                "localhost",
-                "HTML email test",
-                "Mail without attachment!");
-        sendAttachmentEmail(
-                "SergeyGomanyuk@yandex.ru",
-                "sergeygo@amdocs.com",
-                "localhost",
-                "Mail with attachment test",
-                "Mail with attachment!",
-                "attachement.csv");
+//        sendHtmlEmail(
+//                "SergeyGomanyuk@yandex.ru",
+//                "sergeygo@amdocs.com",
+//                "localhost",
+//                "HTML email test",
+//                "Mail without attachment!");
+//        sendEmailWithAttach(
+//                "SergeyGomanyuk@yandex.ru",
+//                "sergeygo@amdocs.com",
+//                "localhost",
+//                "Mail with attachment test",
+//                "Mail with attachment!",
+//                "attachement.csv");
     }
 
     public static void sendTextEmail(String to, String from, String smtpServer, String subject, String text) {
@@ -72,7 +75,7 @@ public class JavaMail {
             MimeMessage message = new MimeMessage(session);
 
             // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
+            //message.setFrom(new InternetAddress(from));
 
             // Set To: header field of the header.
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
@@ -90,6 +93,17 @@ public class JavaMail {
             mex.printStackTrace();
         }
     }
+
+
+//    public static String[] processReportDirectory() {
+//        List<String> fileNames = new ArrayList<>();
+//        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(directory))) {
+//            for (Path path : directoryStream) {
+//                fileNames.add(path.toString());
+//            }
+//        } catch (IOException ex) {}
+//        return fileNames;
+//    }
 
     public static void sendHtmlEmail(String to, String from, String smtpServer, String subject, String text) {
         // Get system properties
@@ -127,7 +141,7 @@ public class JavaMail {
         }
     }
 
-    public static void sendAttachmentEmail(String to, String from, String smtpServer, String subject, String text, String filename) {
+    public static void sendEmailWithAttach(String to, String from, String smtpServer, String subject, String text, String filename) {
         // Get system properties
         Properties properties = System.getProperties();
 
