@@ -1128,7 +1128,7 @@
       <workItem from="1523975322381" duration="1302000" />
       <workItem from="1524056630162" duration="1291000" />
       <workItem from="1524231546183" duration="759000" />
-      <workItem from="1526042011200" duration="358000" />
+      <workItem from="1526042011200" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="+junit-samples&#10;*se-samples&#10;">
       <created>1457021935537</created>
@@ -1235,7 +1235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526042352907</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update 11.05.18">
+      <created>1526042380574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1526042380574</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1271,7 +1278,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254315000" />
+    <option name="totallyTimeSpent" value="254349000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
