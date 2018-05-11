@@ -9,20 +9,19 @@
  * <p>
  * $Id:$
  */
+package sergg.samples.aspectj;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * @author <a href="mailto:sergeygo@amdocs.com">Sergey Gomanyuk</a>
  * @version $Revision:$
  */
-public class LiquidContainerImpl implements LiquidContainer {
-
-    @Override
-    public void pourIn(int volume) {
-
-    }
-
-    @Override
-    public void pourOut(int volume) {
-
-    }
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface Secured {
+    public boolean value() default true;
 }

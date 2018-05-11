@@ -1,0 +1,8 @@
+<aspectj>
+    <aspects>
+        <aspect name="sergg.samples.aspectj.SecuredMethodAspect"/>
+        <weaver options="-verbose -showWeaveInfo -Xset:bcelRepositoryCaching=false">
+            <include within="sergg.samples.aspectj.dep.*"/>
+        </weaver>
+    </aspects>
+</aspectj>

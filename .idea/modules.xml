@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/aspectj/aspectj.iml" filepath="$PROJECT_DIR$/java/aspectj/aspectj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" filepath="$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" filepath="$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk8-tutorials-002-oop-concepts/jdk8-tutorials-002-oop-concepts.iml" filepath="$PROJECT_DIR$/jdk8-tutorials-002-oop-concepts/jdk8-tutorials-002-oop-concepts.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/log4j/log4j.iml" filepath="$PROJECT_DIR$/java/log4j/log4j.iml" />

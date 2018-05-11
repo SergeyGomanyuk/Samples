@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-  </component>
   <component name="JnetxGlobalBuildDir">
     <option name="globalBuildDir" value="$PROJECT_DIR$/../Samples\build" />
   </component>
@@ -13,6 +10,8 @@
         <option value="$PROJECT_DIR$/java-jsch/pom.xml" />
         <option value="$PROJECT_DIR$/java/log4j/pom.xml" />
         <option value="$PROJECT_DIR$/java/se-samples/pom.xml" />
+        <option value="$PROJECT_DIR$/java/aspectj/pom.xml" />
+        <option value="$PROJECT_DIR$/java/aspectj-dep/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,20 +9,23 @@
  * <p>
  * $Id:$
  */
+package sergg.samples.aspectj.dep;
+
+import sergg.samples.aspectj.Secured;
 
 /**
  * @author <a href="mailto:sergeygo@amdocs.com">Sergey Gomanyuk</a>
  * @version $Revision:$
  */
-public class LiquidContainerImpl implements LiquidContainer {
+public class SecuredMethod {
 
-    @Override
-    public void pourIn(int volume) {
-
+    @Secured()
+    public void lockedMethod() {
+        System.out.println("SecuredMethod.lockedMethod");
     }
 
-    @Override
-    public void pourOut(int volume) {
-
+    @Secured(false)
+    public void unlockedMethod() {
+        System.out.println("SecuredMethod.unlockedMethod");
     }
 }
