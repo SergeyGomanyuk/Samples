@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82c150d8-c7ce-4283-9a30-efa1c1a95051" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/Main1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/MainHappenBefore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/PrintClasspathSample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/PrintHostNameSample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/DateFormatSamples.java" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/DateFormatSamples.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/Main.java" afterPath="$PROJECT_DIR$/java/se-samples/src/sergg/samples/Main.java" />
     </list>
     <ignored path="Samples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,6 +83,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -1131,7 +1128,7 @@
       <workItem from="1523975322381" duration="1302000" />
       <workItem from="1524056630162" duration="1291000" />
       <workItem from="1524231546183" duration="759000" />
-      <workItem from="1526042011200" duration="321000" />
+      <workItem from="1526042011200" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="+junit-samples&#10;*se-samples&#10;">
       <created>1457021935537</created>
@@ -1231,7 +1228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511519396875</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update 11.05.18">
+      <created>1526042352907</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526042352907</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1267,7 +1271,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254278000" />
+    <option name="totallyTimeSpent" value="254315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1397,7 +1401,8 @@
     <MESSAGE value="jmx samples have been added" />
     <MESSAGE value="bulk commit" />
     <MESSAGE value="update 24.11.17" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 24.11.17" />
+    <MESSAGE value="update 11.05.18" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 11.05.18" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
