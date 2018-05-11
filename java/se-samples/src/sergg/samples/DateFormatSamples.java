@@ -15,6 +15,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,9 +34,17 @@ public class DateFormatSamples {
 //        printNextTimeToSchedule("28:13:45");
 //        printNextTimeToSchedule("128:13:45");
 
-        scheduledTime("01:01:30");
-        scheduledTime("20:01:30");
-        scheduledTime("23:01:30");
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        final SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMddHHmmss");
+        dateFormatter.setTimeZone(TimeZone.getTimeZone("GMT"));
+        System.out.println(dateFormatter.format(calendar.getTime()));
+//
+//
+//        scheduledTime("01:01:30");
+//        scheduledTime("20:01:30");
+//        scheduledTime("23:01:30");
 
     }
 
