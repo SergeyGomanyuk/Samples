@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://unix.stackexchange.com/questions/236084/how-do-i-create-a-service-for-a-shell-script-so-i-can-start-and-stop-it-like-a-d
+
 #WD="/project/autotst/jatf/deploy/manual_run/test-app-xl-sc/mgmt-rest"
 #CMD="/usr/java/jdk1.8.0_74/bin/java -Dcom.jnetx.asp.home='/project/autotst/jatf/deploy/manual_run/test-app-xl-sc' -jar lib/asp-xl-mgmt-rest-*.jar"
 #PID_FILE="/project/autotst/jatf/deploy/manual_run/test-app-xl-sc/mgmt-rest/bin/xl-mgmt-rest.pid"
