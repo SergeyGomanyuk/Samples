@@ -1,13 +1,24 @@
 #!/bin/bash
 
+# https://www.ostricher.com/2014/10/the-right-way-to-get-the-directory-of-a-bash-script/
+
+get_script_dir () {
+     SOURCE="${BASH_SOURCE[0]}"
+     # While $SOURCE is a symlink, resolve it
+     while [ -h "$SOURCE" ]; do
+          DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+          SOURCE="$( readlink "$SOURCE" )"
+          # If $SOURCE was a relative symlink (so no "/" as prefix, need to resolve it relative to the symlink base directory
+          [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+     done
+     DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+     echo "$DIR"
+}
+SCRIPT_DIR="$(get_script_dir)"
+
 # https://unix.stackexchange.com/questions/236084/how-do-i-create-a-service-for-a-shell-script-so-i-can-start-and-stop-it-like-a-d
 
-#WD="/project/autotst/jatf/deploy/manual_run/test-app-xl-sc/mgmt-rest"
-#CMD="/usr/java/jdk1.8.0_74/bin/java -Dcom.jnetx.asp.home='/project/autotst/jatf/deploy/manual_run/test-app-xl-sc' -jar lib/asp-xl-mgmt-rest-*.jar"
-#PID_FILE="/project/autotst/jatf/deploy/manual_run/test-app-xl-sc/mgmt-rest/bin/xl-mgmt-rest.pid"
-#OUTPUT_FILE="/project/autotst/jatf/deploy/manual_run/test-app-xl-sc/mgmt-rest/bin/xl-mgmt-rest.out"
-
-WD=./
+WD=${SCRIPT_DIR}
 CMD=$0
 PID_FILE=/var/run/`basename $0`.pid
 OUTPUT_FILE=/var/run/`basename $0`.out
