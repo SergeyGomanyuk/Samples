@@ -1,14 +1,3 @@
-/**
- * Copyright (c) Amdocs jNetX.
- * http://www.amdocs.com
- * All rights reserved.
- * This software is the confidential and proprietary information of
- * Amdocs. You shall not disclose such Confidential Information and
- * shall use it only in accordance with the terms of the license
- * agreement you entered into with Amdocs.
- * <p>
- * $Id:$
- */
 package sergg.samples;
 
 import javax.activation.DataHandler;
@@ -24,7 +13,6 @@ import java.util.Properties;
 /**
  * https://www.tutorialspoint.com/java/java_sending_email.htm
  *
- * @author <a href="mailto:sergeygo@amdocs.com">Sergey Gomanyuk</a>
  * @version $Revision:$
  */
 public class JavaMail {
@@ -39,19 +27,19 @@ public class JavaMail {
     public static void main(String[] args) {
         sendTextEmail(
                 "SergeyGomanyuk@yandex.ru",
-                "sergeygo@amdocs.com",
+                "sergeygo@docs.com",
                 "localhost",
                 "Text mail test",
                 "Mail without attachment!");
 //        sendHtmlEmail(
 //                "SergeyGomanyuk@yandex.ru",
-//                "sergeygo@amdocs.com",
+//                "sergeygo@docs.com",
 //                "localhost",
 //                "HTML email test",
 //                "Mail without attachment!");
 //        sendEmailWithAttach(
 //                "SergeyGomanyuk@yandex.ru",
-//                "sergeygo@amdocs.com",
+//                "sergeygo@docs.com",
 //                "localhost",
 //                "Mail with attachment test",
 //                "Mail with attachment!",

@@ -6,7 +6,6 @@
     <option name="delegateToJavac" value="true" />
   </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="ajc" />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
       <entry name="!?*.form" />
@@ -36,15 +35,33 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aspectj" />
         <module name="aspectj-dep" />
+        <module name="comp1" />
+        <module name="comp2" />
+        <module name="gs-rest-service" />
+        <module name="guava" />
+        <module name="jmh" />
         <module name="log4j" />
         <module name="se-samples" />
+        <module name="spring-rest-secured-jwt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="aspectj" target="1.5" />
-      <module name="aspectj-dep" target="1.8" />
+      <module name="aspectj-dep" target="1.5" />
+      <module name="comp1" target="1.5" />
+      <module name="comp2" target="1.5" />
+      <module name="gs-rest-service" target="1.8" />
+      <module name="guava" target="1.5" />
+      <module name="jmh" target="1.8" />
       <module name="log4j" target="1.5" />
       <module name="se-samples" target="1.7" />
+      <module name="spring-rest-secured-jwt" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gs-rest-service" options="-parameters" />
+      <module name="spring-rest-secured-jwt" options="-parameters" />
+    </option>
   </component>
 </project>

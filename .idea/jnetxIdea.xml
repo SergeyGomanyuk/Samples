@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JnetxGlobalBuildDir">
+    <option name="globalBuildDir" value="$PROJECT_DIR$/../Samples\build" />
+  </component>
+</project>

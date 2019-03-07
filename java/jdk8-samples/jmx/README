@@ -148,7 +148,7 @@ $(JDK_HOME)/bin/jconsole
 $(JDK_HOME)/bin/java -Dcom.sun.management.jmxremote.port=9999 \
                      -Dcom.sun.management.jmxremote.authenticate=false \
                      -Dcom.sun.management.jmxremote.ssl=false \
-                     com.example.MainSeparateDebugAndInfoLogFiles
+                     com.example.Main
 
 # Start the JMX client application on a different shell window on the same host
 #

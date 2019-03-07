@@ -6,7 +6,7 @@
 
 package com.example;
 
-public interface HelloMBean {
+public interface HelloMBean extends HelloInt {
     //-----------
     // operations
     //-----------

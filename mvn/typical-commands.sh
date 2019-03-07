@@ -28,4 +28,4 @@ mvn site
 
 # build and install test jar
 mvn jar:test-jar
-mvn install:install-file -DgroupId=com.amdocs.nfv.common -DartifactId=nfvo-core-lib -Dversion=1.0-SNAPSHOT -Dclassifier=tests -Dpackaging=test-jar -Dfile=nfvo-core-lib-1.0-SNAPSHOT-tests.jar
+mvn install:install-file -DgroupId=groupId -DartifactId=nfvo-core-lib -Dversion=1.0-SNAPSHOT -Dclassifier=tests -Dpackaging=test-jar -Dfile=nfvo-core-lib-1.0-SNAPSHOT-tests.jar

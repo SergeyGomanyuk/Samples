@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="C:\Users\sergeygo\Projects\Samples\java\spring-gs-rest-service" vcs="Git" />
   </component>
 </project>

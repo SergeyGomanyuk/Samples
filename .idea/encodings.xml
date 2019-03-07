@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/java/jmh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/spring-gs-rest-service/complete" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/spring-rest-secured-jwt" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

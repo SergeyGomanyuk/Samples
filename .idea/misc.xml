@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JnetxGlobalBuildDir">
-    <option name="globalBuildDir" value="$PROJECT_DIR$/../Samples\build" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -12,6 +9,12 @@
         <option value="$PROJECT_DIR$/java/se-samples/pom.xml" />
         <option value="$PROJECT_DIR$/java/aspectj/pom.xml" />
         <option value="$PROJECT_DIR$/java/aspectj-dep/pom.xml" />
+        <option value="$PROJECT_DIR$/java/spring-gs-rest-service/complete/pom.xml" />
+        <option value="$PROJECT_DIR$/java/jmh/pom.xml" />
+        <option value="$PROJECT_DIR$/java/guava/pom.xml" />
+        <option value="$PROJECT_DIR$/java/comp1/pom.xml" />
+        <option value="$PROJECT_DIR$/java/comp2/pom.xml" />
+        <option value="$PROJECT_DIR$/java/spring-rest-secured-jwt/pom.xml" />
       </list>
     </option>
   </component>

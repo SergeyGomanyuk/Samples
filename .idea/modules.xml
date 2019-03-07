@@ -5,10 +5,17 @@
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/aspectj/aspectj.iml" filepath="$PROJECT_DIR$/java/aspectj/aspectj.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" filepath="$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/comp1/comp1.iml" filepath="$PROJECT_DIR$/java/comp1/comp1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/comp2/comp2.iml" filepath="$PROJECT_DIR$/java/comp2/comp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/spring-gs-rest-service/complete/gs-rest-service.iml" filepath="$PROJECT_DIR$/java/spring-gs-rest-service/complete/gs-rest-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/guava/guava.iml" filepath="$PROJECT_DIR$/java/guava/guava.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" filepath="$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk8-tutorials-002-oop-concepts/jdk8-tutorials-002-oop-concepts.iml" filepath="$PROJECT_DIR$/jdk8-tutorials-002-oop-concepts/jdk8-tutorials-002-oop-concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/jmh/jmh.iml" filepath="$PROJECT_DIR$/java/jmh/jmh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/jdk8-samples/jmx/jmx.iml" filepath="$PROJECT_DIR$/java/jdk8-samples/jmx/jmx.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/log4j/log4j.iml" filepath="$PROJECT_DIR$/java/log4j/log4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/se-samples/se-samples.iml" filepath="$PROJECT_DIR$/java/se-samples/se-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/spring-rest-secured-jwt/spring-rest-secured-jwt.iml" filepath="$PROJECT_DIR$/java/spring-rest-secured-jwt/spring-rest-secured-jwt.iml" />
     </modules>
   </component>
 </project>

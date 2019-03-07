@@ -1,7 +1,6 @@
 package sergg.samples.aspectj;
 
 /**
- * @author <a href="mailto:sergeygo@amdocs.com">Sergey Gomanyuk</a>
  * @version $Revision:$
  */
 public aspect AccountAspect {

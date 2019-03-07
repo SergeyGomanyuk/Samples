@@ -109,13 +109,13 @@ public class Client {
         // Create a dedicated proxy for the MBean instead of
         // going directly through the MBean server connection
         //
-        HelloMBean mbeanProxy =
-            JMX.newMBeanProxy(mbsc, mbeanName, HelloMBean.class, true);
+        HelloExtMbean mbeanProxy =
+            JMX.newMBeanProxy(mbsc, mbeanName, HelloExtMbean.class, true);
 
         // Add notification listener on Hello MBean
         //
         echo("\nAdd notification listener...");
-	mbsc.addNotificationListener(mbeanName, listener, null, null);
+	    mbsc.addNotificationListener(mbeanName, listener, null, null);
 
         // Get CacheSize attribute in Hello MBean
         //
@@ -141,6 +141,19 @@ public class Client {
         //
         echo("\nInvoke sayHello() in Hello MBean...");
         mbeanProxy.sayHello();
+
+        echo("\nInvoke sayHelloInt() in Hello MBean...");
+        mbeanProxy.sayHelloInt();
+
+        // Invoke "sayHello" in Hello MBean
+        //
+        echo("\nInvoke sayHelloExt() in Hello MBean...");
+        try {
+            mbeanProxy.sayHelloExt();
+        } catch (Exception e) {
+            echo("\nInvoke sayHelloExt() failed since it is not in initial MBean ...");
+            e.printStackTrace();
+        }
 
         // Invoke "add" in Hello MBean
         //

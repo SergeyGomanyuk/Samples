@@ -9,13 +9,24 @@ package com.example;
 import javax.management.*;
 
 public class Hello
-	extends NotificationBroadcasterSupport implements HelloMBean {
+	extends NotificationBroadcasterSupport implements HelloExtMbean {
 
+	@Override
     public void sayHello() {
-	System.out.println("hello, world");
+	System.out.println("hello, world!");
     }
 
-    public int add(int x, int y) {
+	@Override
+	public void sayHelloInt() {
+        System.out.println("hello, world int!");
+	}
+
+	@Override
+	public void sayHelloExt() {
+		System.out.println("hello, world ext!");
+	}
+
+	public int add(int x, int y) {
 	return x + y;
     }
 

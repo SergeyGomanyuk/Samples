@@ -10,7 +10,9 @@ import java.lang.management.ManagementFactory;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 import javax.management.MBeanServer;
+import javax.management.MBeanServerFactory;
 import javax.management.ObjectName;
+import javax.management.remote.JMXConnectorFactory;
 
 public class Main {
     /* For simplicity, we declare "throws Exception".
@@ -40,6 +42,7 @@ public class Main {
 
         // Register the Queue Sampler MXBean
         mbs.registerMBean(mxbean, mxbeanName);
+
 
         // Wait forever
         System.out.println("Waiting for incoming requests...");
