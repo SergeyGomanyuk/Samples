@@ -1,18 +1,8 @@
-/**
- * Copyright (c) Amdocs jNetX.
- * http://www.amdocs.com
- * All rights reserved.
- * This software is the confidential and proprietary information of
- * Amdocs. You shall not disclose such Confidential Information and
- * shall use it only in accordance with the terms of the license
- * agreement you entered into with Amdocs.
- * <p>
- * $Id:$
- */
 package ru.sergg.springboot.rest.secured;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -26,22 +16,32 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Profile("!disabled-security")
 @Configuration
 @EnableAuthorizationServer
-//@EnableResourceServer
-public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
-    private String clientid = "jnetx";
-//    private String clientSecret = "jnetx";
+public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
+    private String clientid = "kuku";
+//    private String clientSecret = "kuku";
+    // TODO use java private keystore
     private String privateKey = "private key";
 //    private String publicKey = "public key";
+
+    @Value("${ru.sergg.springboot.rest.secured.accessTokenValiditySeconds:3600}") // one hour
+    private int accessTokenValiditySeconds;
+
+    @Value("${ru.sergg.springboot.rest.secured.refreshTokenValiditySeconds:86400}") // one date
+    private int refreshTokenValiditySeconds;
 
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private ClientDetailsService clientDetailsService;
 
     @Bean
     public JwtAccessTokenConverter tokenEnhancer() {
@@ -67,11 +67,12 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     }
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+//        clients.withClientDetails(clientDetailsService);
         clients.inMemory().withClient(clientid)
 //                .secret(clientSecret)
                 .scopes("read", "write")
-                .authorizedGrantTypes("password", "refresh_token").accessTokenValiditySeconds(20000)
-                .refreshTokenValiditySeconds(20000);
+                .authorizedGrantTypes("password", "refresh_token").accessTokenValiditySeconds(accessTokenValiditySeconds)
+                .refreshTokenValiditySeconds(refreshTokenValiditySeconds);
 //        clients.inMemory().withClient("anonymous").autoApprove(true).scopes("read", "write")
 //                .authorizedGrantTypes("password", "refresh_token").accessTokenValiditySeconds(20000)
 //                .refreshTokenValiditySeconds(20000);
