@@ -23,7 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public User loadUserByUsername(final String username) throws UsernameNotFoundException {
         try {
-            if("kuku".equals(username)) return new User(username, passwordEncoder.encode("kuku"), Collections.EMPTY_LIST);
+            if("client".equals(username)) return new User(username, passwordEncoder.encode("clientPassword"), Collections.EMPTY_LIST);
             if(!"admin".equals(username) && ! "user".equals(username)) throw new Exception();
             Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
             grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+username));

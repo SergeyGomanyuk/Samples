@@ -11,32 +11,32 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class GreetingController {
 
-    private static final String template = "%s";
+    private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/unsecured")
+    @RequestMapping("/greetings/unsecured")
     public Greeting unsecured(@RequestParam(value="name", defaultValue="unsecured") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
 
-    @RequestMapping("/userOrAdmin")
+    @RequestMapping("/greetings/userOrAdmin")
     @Secured({"ROLE_user", "ROLE_admin"})
     public Greeting userOrAdmin(@RequestParam(value="name", defaultValue="userOrAdmin") String name) {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
 
-    @RequestMapping("/adminOnly")
+    @RequestMapping("/greetings/adminOnly")
     @Secured("ROLE_admin")
     public Greeting adminOnly(@RequestParam(value="name", defaultValue="adminOnly") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
 
-    @RequestMapping("/authKuku")
-    @PreAuthorize("hasAuthority('kuku')")
-    public Greeting superGreeting(@RequestParam(value="name", defaultValue="authKuku") String name) {
+    @RequestMapping("/greetings/authority")
+    @PreAuthorize("hasAuthority('authority')")
+    public Greeting superGreeting(@RequestParam(value="name", defaultValue="authority") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
