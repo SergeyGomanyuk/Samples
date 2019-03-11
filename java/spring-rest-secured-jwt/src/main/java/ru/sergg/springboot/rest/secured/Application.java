@@ -13,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  https://www.baeldung.com/role-and-privilege-for-spring-security-registration
  *  https://www.baeldung.com/spring-profiles
  *  https://stackoverflow.com/questions/10041410/default-profile-in-spring-3-1
+ *  https://www.baeldung.com/injecting-mocks-in-spring
+ *  https://www.baeldung.com/java-spring-mockito-mock-mockbean
  */
 @SpringBootApplication
 public class Application {
