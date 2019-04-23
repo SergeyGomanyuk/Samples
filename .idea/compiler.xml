@@ -54,7 +54,7 @@
       <module name="guava" target="1.5" />
       <module name="jmh" target="1.8" />
       <module name="log4j" target="1.5" />
-      <module name="se-samples" target="1.7" />
+      <module name="se-samples" target="1.8" />
       <module name="spring-rest-secured-jwt" target="1.8" />
     </bytecodeTargetLevel>
   </component>

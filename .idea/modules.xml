@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/java/jdk8-samples/jmx/jmx.iml" filepath="$PROJECT_DIR$/java/jdk8-samples/jmx/jmx.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/log4j/log4j.iml" filepath="$PROJECT_DIR$/java/log4j/log4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/se-samples/se-samples.iml" filepath="$PROJECT_DIR$/java/se-samples/se-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/service-loader/service-loader.iml" filepath="$PROJECT_DIR$/java/service-loader/service-loader.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/spring-rest-secured-jwt/spring-rest-secured-jwt.iml" filepath="$PROJECT_DIR$/java/spring-rest-secured-jwt/spring-rest-secured-jwt.iml" />
     </modules>
   </component>
