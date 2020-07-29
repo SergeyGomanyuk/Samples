@@ -37,6 +37,7 @@
         <module name="aspectj-dep" />
         <module name="comp1" />
         <module name="comp2" />
+        <module name="consistentBuild" />
         <module name="gs-rest-service" />
         <module name="guava" />
         <module name="jmh" />
@@ -50,6 +51,7 @@
       <module name="aspectj-dep" target="1.5" />
       <module name="comp1" target="1.5" />
       <module name="comp2" target="1.5" />
+      <module name="consistentBuild" target="1.5" />
       <module name="gs-rest-service" target="1.8" />
       <module name="guava" target="1.5" />
       <module name="jmh" target="1.8" />

@@ -265,16 +265,16 @@ public class Main {
 //        System.out.printf("0x%x%x%x%n", bytes[0],bytes[1],bytes[2]);
 //        System.out.printf("0x%02x%n", 15);
         //        final long startTime = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").parse("2017_12_30_20_30_35").getTime();
-//        final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"));
-////        c.setTime(new Date());
-//        c.setTimeInMillis(startTime);
-//        System.out.println("YEAR " + c.get(Calendar.YEAR));
-//        System.out.println("MONTH " + (c.get(Calendar.MONTH) + 1));
-//        System.out.println("DAY_OF_MONTH " + c.get(Calendar.DAY_OF_MONTH));
-//        System.out.println("HOUR_OF_DAY " + c.get(Calendar.HOUR_OF_DAY));
-//        System.out.println("MINUTE " + c.get(Calendar.MINUTE));
-//        System.out.println("SECOND " + c.get(Calendar.SECOND));
-//        System.out.println("WEEKDAY " + c.get(Calendar.DAY_OF_WEEK));
+//        final Calendar counter = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"));
+////        counter.setTime(new Date());
+//        counter.setTimeInMillis(startTime);
+//        System.out.println("YEAR " + counter.get(Calendar.YEAR));
+//        System.out.println("MONTH " + (counter.get(Calendar.MONTH) + 1));
+//        System.out.println("DAY_OF_MONTH " + counter.get(Calendar.DAY_OF_MONTH));
+//        System.out.println("HOUR_OF_DAY " + counter.get(Calendar.HOUR_OF_DAY));
+//        System.out.println("MINUTE " + counter.get(Calendar.MINUTE));
+//        System.out.println("SECOND " + counter.get(Calendar.SECOND));
+//        System.out.println("WEEKDAY " + counter.get(Calendar.DAY_OF_WEEK));
 
         StringBuilder msg = new StringBuilder();
 //

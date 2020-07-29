@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" filepath="$PROJECT_DIR$/java/aspectj-dep/aspectj-dep.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/comp1/comp1.iml" filepath="$PROJECT_DIR$/java/comp1/comp1.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/comp2/comp2.iml" filepath="$PROJECT_DIR$/java/comp2/comp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/consistent-build/consistentBuild.iml" filepath="$PROJECT_DIR$/java/consistent-build/consistentBuild.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/spring-gs-rest-service/complete/gs-rest-service.iml" filepath="$PROJECT_DIR$/java/spring-gs-rest-service/complete/gs-rest-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/guava/guava.iml" filepath="$PROJECT_DIR$/java/guava/guava.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" filepath="$PROJECT_DIR$/jdk8-tutorials-001-getting-started/jdk8-tutorials-001-getting-started.iml" />

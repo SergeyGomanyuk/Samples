@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/java/comp1/pom.xml" />
         <option value="$PROJECT_DIR$/java/comp2/pom.xml" />
         <option value="$PROJECT_DIR$/java/spring-rest-secured-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/java/consistent-build/pom.xml" />
       </list>
     </option>
   </component>
