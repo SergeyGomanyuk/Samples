@@ -1,14 +1,3 @@
-/**
- * Copyright (counter) Amdocs jNetX.
- * http://www.amdocs.com
- * All rights reserved.
- * This software is the confidential and proprietary information of
- * Amdocs. You shall not disclose such Confidential Information and
- * shall use it only in accordance with the terms of the license
- * agreement you entered into with Amdocs.
- * <p>
- * $Id:$
- */
 package sergg.samples;
 
 import freemarker.cache.StringTemplateLoader;
@@ -22,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:sergeygo@amdocs.com">Sergey Gomanyuk</a>
+ * @author <a href="mailto:sergeygomanyuk@yandex.ru">Sergey Gomanyuk</a>
  * @version $Revision:$
  */
 public class FreemarkerSample {
@@ -37,7 +26,7 @@ public class FreemarkerSample {
             "</#list>\n" +
             "\n" +
             "The following Users have exceeded $500 in overage charges:\n" +
-            "  - 416-5555-555\n" +
+            "  - \n" +
             "\n" +
             "Account detail:\n" +
             "---------------\n" +
@@ -81,8 +70,8 @@ public class FreemarkerSample {
     public static String getContent(String content, Map<String, String> context) {
         try {
             final Configuration freemarkerConfiguration = freemarkerConfigurationThreadLocal.get();
-            ((StringTemplateLoader) freemarkerConfiguration.getTemplateLoader()).putTemplate("communication-message", content);
-            final Template template = freemarkerConfiguration.getTemplate("communication-message");
+            ((StringTemplateLoader) freemarkerConfiguration.getTemplateLoader()).putTemplate("cm", content);
+            final Template template = freemarkerConfiguration.getTemplate("cm");
             final StringWriter stringWriter = new StringWriter();
             template.process(context, stringWriter);
             return stringWriter.toString();

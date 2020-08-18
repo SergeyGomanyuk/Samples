@@ -1,9 +1,5 @@
 package ru.sergg.springboot.rest.secured;
 
-//import com.amdocs.digital.ms.resource.inventory.business.internationalization.interfaces.IMessages;
-//import com.amdocs.digital.ms.resource.inventory.resources.models.ErrorResponse;
-//import com.codahale.metrics.MetricRegistry;
-//import com.codahale.metrics.Timer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
