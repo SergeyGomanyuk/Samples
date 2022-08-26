@@ -17,6 +17,7 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for java-jssh" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -34,16 +35,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="aspectj" />
-        <module name="aspectj-dep" />
-        <module name="comp1" />
         <module name="comp2" />
-        <module name="consistentBuild" />
-        <module name="gs-rest-service" />
-        <module name="guava" />
         <module name="jmh" />
-        <module name="log4j" />
+        <module name="comp1" />
+        <module name="aspectj-dep" />
+        <module name="consistentBuild" />
         <module name="se-samples" />
         <module name="spring-rest-secured-jwt" />
+        <module name="guava" />
+        <module name="gs-rest-service" />
+        <module name="log4j" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

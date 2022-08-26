@@ -5,3 +5,10 @@ java/se-samples/target
 java/se-samples/target
 java/log4j/target
 logs
+/java/spring-rest-secured-jwt/target/
+/java/jmh/target/
+/java/guava/target/
+/java/comp2/target/
+/java/comp1/target/
+/java/aspectj-dep/target/
+/java/aspectj/target/
